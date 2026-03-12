@@ -265,7 +265,7 @@ Planned enhancements include:
 
 # 👩‍💻 Author
 
-**Lasya Hanu**
+**Lasya Hanumandla**
 
 ---
 

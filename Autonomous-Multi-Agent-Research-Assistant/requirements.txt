@@ -7,4 +7,9 @@ reportlab
 tavily-python
 openai
 langchain
-pinecone-client
+pinecone
+faiss-cpu
+numpy
+pandas
+tqdm
+requests

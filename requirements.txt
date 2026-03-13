@@ -13,3 +13,8 @@ numpy
 pandas
 tqdm
 requests
+torch
+transformers
+scikit-learn
+scipy
+huggingface-hub

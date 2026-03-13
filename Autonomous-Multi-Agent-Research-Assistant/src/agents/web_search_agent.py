@@ -1,13 +1,18 @@
 import os
-from dotenv import load_dotenv
+import streamlit as st
 from tavily import TavilyClient
 
-load_dotenv()
+
+def get_secret(key_name: str):
+    try:
+        return st.secrets[key_name]
+    except Exception:
+        return os.getenv(key_name)
 
 
 class WebSearchAgent:
     def __init__(self):
-        self.api_key = os.getenv("TAVILY_API_KEY")
+        self.api_key = get_secret("TAVILY_API_KEY")
         self.client = TavilyClient(api_key=self.api_key) if self.api_key else None
 
     def search(self, query: str, max_results: int = 3):
@@ -18,7 +23,7 @@ class WebSearchAgent:
             return [{
                 "title": "Tavily API key missing",
                 "url": "",
-                "content": "Add TAVILY_API_KEY in your .env file to enable web search."
+                "content": "Add TAVILY_API_KEY in Streamlit secrets or .env to enable web search."
             }]
 
         try:

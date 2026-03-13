@@ -1,0 +1,15 @@
+streamlit
+sentence-transformers
+python-dotenv
+pydantic
+pypdf
+reportlab
+tavily-python
+openai
+langchain
+pinecone
+faiss-cpu
+numpy
+pandas
+tqdm
+requests
